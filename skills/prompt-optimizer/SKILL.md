@@ -37,7 +37,7 @@ curl -s -X POST https://ai.ze.mt/api/v1/optimize \
   -d '{"prompt":"<job description>","targets":["claude"],"platform":"windows"}'
 ```
 
-Self-host: https://github.com/LinespottingPrivate/zemt-prompt-optimizer (Cloudflare Worker, bring your own xAI key).
+Self-host: https://github.com/LinespottingOrg/zemt-prompt-optimizer (Cloudflare Worker, bring your own xAI key).
 
 ## Decision rules (apply after the call)
 

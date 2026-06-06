@@ -27,7 +27,7 @@ Live instance: **https://ai.ze.mt** · Install page: **https://ai.ze.mt/install*
 ## Self-host (5 min)
 
 ```bash
-git clone https://github.com/LinespottingPrivate/zemt-prompt-optimizer
+git clone https://github.com/LinespottingOrg/zemt-prompt-optimizer
 cd zemt-prompt-optimizer
 npx wrangler secret put XAI_API_KEY     # console.x.ai
 npx wrangler secret put ACCESS_KEY
