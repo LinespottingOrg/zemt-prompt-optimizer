@@ -1,0 +1,15 @@
+name = "zemt-prompt-optimizer"
+main = "worker.js"
+compatibility_date = "2026-06-01"
+workers_dev = true
+
+# Optional custom domain:
+# routes = [{ pattern = "your.domain.tld", custom_domain = true }]
+
+# Required secrets (npx wrangler secret put <NAME>):
+#   XAI_API_KEY    - your xAI key (console.x.ai), pays for grok-4.3 analysis
+#   ACCESS_KEY     - passphrase for the web UI
+#   SESSION_SECRET - random 32+ chars (cookie signing)
+#   API_TOKEN      - bearer token for /api/v1/optimize and MCP optimize_prompt
+# Optional (Google login): GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
+#   -> also edit ALLOWED_EMAILS in worker.js
