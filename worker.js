@@ -370,61 +370,61 @@ const HTML = `<!doctype html>
 <style>
 :root{--bg:#0b0e14;--card:#131825;--line:#232b3d;--txt:#dbe2f0;--dim:#8a94ab;--acc:#5eead4;--acc2:#818cf8;--warn:#fbbf24;--err:#f87171}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--txt);font:15px/1.55 system-ui,Segoe UI,Roboto,sans-serif;padding:24px;max-width:1150px;margin:0 auto}
-h1{font-size:22px;letter-spacing:.5px}h1 b{color:var(--acc)}
-.sub{color:var(--dim);font-size:13px;margin:4px 0 20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px}
-textarea{width:100%;min-height:150px;background:#0e1320;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:12px;font:14px/1.5 ui-monospace,Consolas,monospace;resize:vertical}
+body{background:var(--bg);color:var(--txt);font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif;padding:10px 16px;max-width:1200px;margin:0 auto}
+h1{font-size:17px;display:inline}h1 b{color:var(--acc)}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:7px}
+.top .sub{color:var(--dim);font-size:12.5px;flex:1;min-width:200px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:7px}
+textarea{width:100%;min-height:54px;background:#0e1320;color:var(--txt);border:1px solid var(--line);border-radius:7px;padding:8px 10px;font:13px/1.45 ui-monospace,Consolas,monospace;resize:vertical}
 textarea:focus,input:focus{outline:1px solid var(--acc2)}
-.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px}
-label.chk{display:flex;gap:6px;align-items:center;background:#0e1320;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:14px;user-select:none}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:7px}
+label.chk{display:flex;gap:5px;align-items:center;background:#0e1320;border:1px solid var(--line);border-radius:7px;padding:4px 9px;cursor:pointer;font-size:13px;user-select:none;white-space:nowrap}
 label.chk input{accent-color:var(--acc)}
-.badge{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--dim)}
+.badge{font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
 .badge.on{color:var(--acc);border-color:var(--acc)}
-select,input[type=number],input[type=password]{background:#0e1320;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:14px}
-input[type=number]{width:95px}
-input[type=range]{accent-color:var(--acc2)}
-button{background:linear-gradient(135deg,var(--acc2),var(--acc));color:#08111c;font-weight:700;border:0;border-radius:8px;padding:10px 22px;font-size:15px;cursor:pointer}
+select,input[type=number],input[type=password]{background:#0e1320;color:var(--txt);border:1px solid var(--line);border-radius:7px;padding:4px 8px;font-size:13px}
+input[type=range]{accent-color:var(--acc2);width:80px}
+button{background:linear-gradient(135deg,var(--acc2),var(--acc));color:#08111c;font-weight:700;border:0;border-radius:7px;padding:6px 18px;font-size:14px;cursor:pointer}
 button:disabled{opacity:.45;cursor:wait}
-button.ghost{background:none;border:1px solid var(--line);color:var(--dim);font-weight:400;padding:6px 12px;font-size:13px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-.chip{font-size:12px;padding:3px 10px;border-radius:99px;background:#0e1320;border:1px solid var(--line)}
+button.ghost{background:none;border:1px solid var(--line);color:var(--dim);font-weight:400;padding:3px 9px;font-size:12px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:5px}
+.chip{font-size:11.5px;padding:2px 8px;border-radius:99px;background:#0e1320;border:1px solid var(--line)}
 .chip.hl{border-color:var(--acc);color:var(--acc)}
 .chip.warn{border-color:var(--warn);color:var(--warn)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);white-space:nowrap}
-th{color:var(--dim);font-weight:500;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{text-align:left;padding:3px 7px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--dim);font-weight:500;font-size:10.5px;text-transform:uppercase;letter-spacing:.4px}
 td.num,th.num{text-align:right}
 tr.best td{color:var(--acc)}
 tr.rec td{background:rgba(129,140,248,.08)}
-.promptbox{position:relative;background:#0e1320;border:1px solid var(--line);border-radius:8px;padding:14px;margin-top:10px;white-space:pre-wrap;font:13px/1.5 ui-monospace,Consolas,monospace;max-height:380px;overflow:auto}
-.copy{position:absolute;top:8px;right:8px;background:var(--line);color:var(--txt);border:0;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer}
+.promptbox{position:relative;background:#0e1320;border:1px solid var(--line);border-radius:7px;padding:10px;margin-top:6px;white-space:pre-wrap;font:12.5px/1.45 ui-monospace,Consolas,monospace;max-height:300px;overflow:auto}
+.copy{position:absolute;top:6px;right:6px;background:var(--line);color:var(--txt);border:0;border-radius:5px;padding:3px 9px;font-size:11px;cursor:pointer}
 .copy:hover{background:var(--acc2)}
-h3{font-size:15px;margin:14px 0 4px}h3 .tool{color:var(--acc2)}
-details{margin-top:10px}summary{cursor:pointer;color:var(--dim);font-size:13px}
-.err{color:var(--err);margin-top:10px;font-size:14px}
-.spin{display:inline-block;width:14px;height:14px;border:2px solid #08111c;border-top-color:transparent;border-radius:50%;animation:r .7s linear infinite;vertical-align:-2px;margin-right:7px}
+h3{font-size:13.5px;margin:6px 0 3px;display:inline-block}h3 .tool{color:var(--acc2)}
+details{margin-top:3px}summary{cursor:pointer;color:var(--dim);font-size:12px}
+.err{color:var(--err);font-size:13px}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid #08111c;border-top-color:transparent;border-radius:50%;animation:r .7s linear infinite;vertical-align:-2px;margin-right:6px}
 @keyframes r{to{transform:rotate(360deg)}}
-#login{max-width:420px;margin:10vh auto}
-.gbtn{display:block;text-align:center;background:#fff;color:#1a1a1a;border-radius:8px;padding:10px;font-weight:600;text-decoration:none;margin-bottom:12px}
-.hr{display:flex;align-items:center;gap:10px;color:var(--dim);font-size:12px;margin:14px 0}
+#login{max-width:420px;margin:8vh auto}
+.gbtn{display:block;text-align:center;background:#fff;color:#1a1a1a;border-radius:8px;padding:10px;font-weight:600;text-decoration:none;margin-bottom:10px}
+.hr{display:flex;align-items:center;gap:10px;color:var(--dim);font-size:12px;margin:10px 0}
 .hr:before,.hr:after{content:"";flex:1;height:1px;background:var(--line)}
-.stat{display:flex;gap:24px;flex-wrap:wrap}
-.stat div b{display:block;font-size:20px;color:var(--acc)}
-.stat div span{font-size:12px;color:var(--dim)}
-.muted{color:var(--dim);font-size:13px}
-.bgrid{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
-.bgrid .fld{display:flex;flex-direction:column;gap:3px;background:#0e1320;border:1px solid var(--line);border-radius:8px;padding:7px 10px}
-.bgrid .fld span{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.4px}
-.bgrid input[type=number]{border:0;background:none;padding:0;color:var(--acc);font-size:15px;font-weight:600}
-.budgetline{margin-top:10px;font-size:14px}
+.muted{color:var(--dim);font-size:12px}
+.bgrid{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
+.bgrid .fld{display:flex;align-items:center;gap:5px;background:#0e1320;border:1px solid var(--line);border-radius:7px;padding:3px 8px}
+.bgrid .fld span{font-size:10.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.3px;white-space:nowrap}
+.bgrid input[type=number]{border:0;background:none;padding:0;color:var(--acc);font-size:13px;font-weight:600;width:62px}
+#b_jobs{width:104px!important}
+.budgetline{margin-top:5px;font-size:12.5px}
 .budgetline b{color:var(--acc)}
+.foot{color:var(--dim);font-size:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:2px 2px 8px}
+.foot a{color:var(--acc2)}
+.foot b{color:var(--acc)}
 </style></head><body>
 
 <div id="login" style="display:none" class="card">
   <h1>ai.<b>ze.mt</b></h1>
-  <p class="sub">prompt optimizer & cost router — private</p>
-  <p class="sub"><a href="/install" style="color:var(--acc2)">→ public: install MCP + skill</a></p>
+  <p class="muted" style="margin:4px 0 12px">prompt optimizer & cost router — private · <a href="/install" style="color:var(--acc2)">public: install MCP + skill</a></p>
   <a id="gbtn" class="gbtn" href="/auth/google" style="display:none">Sign in with Google</a>
   <div class="hr" id="ghr" style="display:none">or</div>
   <input type="password" id="key" placeholder="access key" style="width:100%">
@@ -433,59 +433,49 @@ details{margin-top:10px}summary{cursor:pointer;color:var(--dim);font-size:13px}
 </div>
 
 <div id="app" style="display:none">
-  <div style="display:flex;justify-content:space-between;align-items:start">
-    <div><h1>ai.<b>ze.mt</b></h1><p class="sub">paste a rough prompt → grok-4.3 compiles tool-optimized prompts + picks the cheapest model that can do the job</p></div>
-    <div style="display:flex;gap:8px;align-items:center">
-      <span class="badge on" id="osbadge"></span>
-      <button class="ghost" onclick="location.href='/auth/logout'">logout</button>
-    </div>
+  <div class="top">
+    <h1>ai.<b>ze.mt</b></h1>
+    <span class="sub">rough prompt → grok-4.3 → tool-optimized prompts + cheapest capable model</span>
+    <span class="badge on" id="osbadge"></span>
+    <button class="ghost" onclick="location.href='/auth/logout'">logout</button>
   </div>
 
   <div class="card">
-    <textarea id="prompt" placeholder="Describe the job. Rough is fine — e.g. 'go through 290 council motion drafts and standardize the header format, output markdown'"></textarea>
+    <textarea id="prompt" placeholder="Describe the job — e.g. 'standardize headers in 290 council motion drafts, output markdown'"></textarea>
     <div class="row">
       <label class="chk"><input type="checkbox" id="t_claude" checked> Claude Cowork</label>
       <label class="chk"><input type="checkbox" id="t_grok"> Grok Build</label>
       <label class="chk"><input type="checkbox" id="t_gemini"> Gemini</label>
-      <span class="badge">|</span>
-      <select id="platform"><option value="windows">Windows (PC)</option><option value="mac">macOS</option></select>
+      <select id="platform"><option value="windows">Windows</option><option value="mac">macOS</option></select>
       <button id="go" onclick="run()">Optimize</button>
+      <span class="err" id="aerr"></span>
     </div>
-    <p class="err" id="aerr"></p>
   </div>
 
   <div id="out"></div>
 
   <div class="card">
-    <h3 style="margin-top:0">Cost comparison & dynamic budget <span class="muted" style="font-weight:400">— live, edit anything</span></h3>
     <div class="bgrid">
-      <div class="fld"><span>tokens in / job</span><input type="number" id="b_in" value="2000" min="1" step="100"></div>
-      <div class="fld"><span>tokens out / job</span><input type="number" id="b_out" value="800" min="1" step="100"></div>
-      <div class="fld"><span>number of same job estimate</span><input type="number" id="b_jobs" value="1" min="1" max="1000000000" style="width:160px"></div>
-      <div class="fld"><span>budget USD</span><input type="number" id="b_budget" value="10" min="0" step="1"></div>
-      <div class="fld" style="min-width:170px"><span>cached input: <b id="b_cachev" style="color:var(--acc)">0%</b></span><input type="range" id="b_cache" value="0" min="0" max="95" step="5"></div>
-      <label class="chk"><input type="checkbox" id="b_batch"> batch API (−50% where supported)</label>
+      <b style="font-size:13px;margin-right:2px">Cost & budget</b>
+      <div class="fld"><span>in/job</span><input type="number" id="b_in" value="2000" min="1" step="100"></div>
+      <div class="fld"><span>out/job</span><input type="number" id="b_out" value="800" min="1" step="100"></div>
+      <div class="fld"><span>jobs</span><input type="number" id="b_jobs" value="1" min="1" max="1000000000"></div>
+      <div class="fld"><span>budget $</span><input type="number" id="b_budget" value="10" min="0" step="1"></div>
+      <div class="fld"><span>cached <b id="b_cachev" style="color:var(--acc)">0%</b></span><input type="range" id="b_cache" value="0" min="0" max="95" step="5"></div>
+      <label class="chk"><input type="checkbox" id="b_batch"> batch −50%</label>
     </div>
     <div style="overflow-x:auto"><table id="costtbl"><thead><tr>
-      <th>model</th><th>vendor</th><th>ctx</th><th class="num">$/M in</th><th class="num">$/M out</th><th class="num">$/M cached</th><th class="num">cost / job</th><th class="num">total ×jobs</th><th class="num">jobs in budget</th><th>note</th>
+      <th>model</th><th>ctx</th><th class="num">$/M in · out · cached</th><th class="num">cost / job</th><th class="num">total ×jobs</th><th class="num">jobs in budget</th><th>note</th>
     </tr></thead><tbody></tbody></table></div>
     <p class="budgetline" id="budgetline"></p>
   </div>
 
-  <div class="card">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h3 style="margin:0">Token log (this browser)</h3>
-      <button class="ghost" onclick="clearLog()">clear</button>
-    </div>
-    <div class="stat" style="margin-top:10px">
-      <div><b id="s_req">0</b><span>requests</span></div>
-      <div><b id="s_tok">0</b><span>analysis tokens</span></div>
-      <div><b id="s_usd">$0</b><span>analysis spend</span></div>
-      <div><b id="s_hit">0</b><span>cache hits ($0)</span></div>
-    </div>
-    <details><summary>recent requests</summary><table id="logtbl"><thead><tr><th>time</th><th>type</th><th>in</th><th>out</th><th>cost</th><th>cached</th></tr></thead><tbody></tbody></table></details>
+  <div class="foot">
+    <span>log: <b id="s_req">0</b> req · <b id="s_tok">0</b> tok · <b id="s_usd">$0</b> · <b id="s_hit">0</b> hits</span>
+    <details style="margin:0"><summary>history</summary><table id="logtbl"><thead><tr><th>time</th><th>type</th><th>in</th><th>out</th><th>cost</th><th>cached</th></tr></thead><tbody></tbody></table></details>
+    <button class="ghost" onclick="clearLog()">clear</button>
+    <span>grok-4.3 · cached 7d · prices 2026-06 · <a href="/install">install MCP + skill</a> · <a href="https://github.com/LinespottingOrg/zemt-prompt-optimizer">github</a></span>
   </div>
-  <p class="muted">Playbook: TOKEN-EFFICIENT-AGENTS.md · analysis runs on xAI grok-4.3 · results cached 7 days (identical prompt+targets = $0) · prices June 2026 · <a href="/install" style="color:var(--acc2)">install MCP + skill</a></p>
 </div>
 
 <script>
@@ -506,6 +496,7 @@ async function init(){
   ["b_in","b_out","b_jobs","b_budget","b_batch"].forEach(id=>$(id).addEventListener("input",renderCost));
   $("b_cache").addEventListener("input",()=>{$("b_cachev").textContent=$("b_cache").value+"%";renderCost()});
   $("prompt").addEventListener("input",()=>{const ch=$("prompt").value.length;if(ch){$("b_in").value=Math.ceil(ch/4)+500;$("b_out").value=Math.ceil((+$("b_in").value)*.4);renderCost()}});
+  $("prompt").addEventListener("keydown",e=>{if(e.key==="Enter"&&(e.ctrlKey||e.metaKey))run()});
 }
 async function loginKey(){
   const r=await fetch("/auth/key",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key:$("key").value})});
@@ -538,8 +529,8 @@ function renderCost(){
   tb.innerHTML=rows.map((p,i)=>{
     const total=p.job*jobs, afford=p.job>0?Math.floor(budget/p.job):0;
     const cls=(i===0?"best ":"")+(p.id===RECOMMENDED?"rec":"");
-    return '<tr class="'+cls+'"><td>'+p.id+(p.id===RECOMMENDED?" ★":"")+(i===0?" ◎":"")+'</td><td>'+p.vendor+'</td><td>'+p.ctx+'</td>'+
-      '<td class="num">'+p.inp.toFixed(2)+'</td><td class="num">'+p.out.toFixed(2)+'</td><td class="num">'+p.cin.toFixed(2)+'</td>'+
+    return '<tr class="'+cls+'"><td>'+p.id+(p.id===RECOMMENDED?" ★":"")+(i===0?" ◎":"")+'</td><td>'+p.ctx+'</td>'+
+      '<td class="num">'+p.inp.toFixed(2)+' · '+p.out.toFixed(2)+' · '+p.cin.toFixed(2)+'</td>'+
       '<td class="num">'+fmt(p.job)+'</td><td class="num">'+fmt(total)+(batch&&p.batch?" ⓑ":"")+'</td>'+
       '<td class="num">'+afford.toLocaleString()+'</td><td class="muted">'+p.note+'</td></tr>';
   }).join("");
@@ -571,7 +562,7 @@ async function run(){
   const prompt=$("prompt").value.trim();if(!prompt)return;
   const targets=[["t_claude","claude"],["t_grok","grok"],["t_gemini","gemini"]].filter(([i])=>$(i).checked).map(([,t])=>t);
   if(!targets.length){$("aerr").textContent="pick at least one target tool";return}
-  $("aerr").textContent="";$("go").disabled=true;$("go").innerHTML='<span class="spin"></span>grok-4.3 analyzing…';
+  $("aerr").textContent="";$("go").disabled=true;$("go").innerHTML='<span class="spin"></span>analyzing…';
   try{
     const r=await fetch("/api/optimize",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt,targets,platform:$("platform").value})});
     const d=await r.json();
@@ -595,23 +586,22 @@ function render(d){
   if(c.needs_web)h+='<span class="chip">needs web</span>';
   if(c.risk==="high")h+='<span class="chip warn">high risk</span>';
   if(d.cached)h+='<span class="chip hl">cache hit — $0</span>';
+  h+='<span class="chip">est '+(a.est_tokens?.input||0).toLocaleString()+' in / '+(a.est_tokens?.output||0).toLocaleString()+' out</span>';
+  h+='<span class="chip">analysis $'+(d.usage?.analysis_cost_usd||0).toFixed(4)+'</span>';
   h+='</div>';
-  h+='<p><b style="color:var(--acc)">→ '+esc(a.routing?.recommended)+'</b> — '+esc(a.routing?.rationale)+'</p>';
-  h+='<p class="muted">escalation: '+esc(a.routing?.escalation)+'</p>';
-  if(a.context_advice?.length)h+='<p class="muted" style="margin-top:8px">context: '+a.context_advice.map(esc).join(" · ")+'</p>';
-  if(a.warnings?.length)h+='<p class="muted" style="color:var(--warn);margin-top:6px">⚠ '+a.warnings.map(esc).join(" · ")+'</p>';
-  h+='<p class="muted" style="margin-top:8px">est. '+(a.est_tokens?.input||0).toLocaleString()+' tok in / '+(a.est_tokens?.output||0).toLocaleString()+' out per job → injected into the budget panel below</p>';
+  h+='<p style="margin:2px 0"><b style="color:var(--acc)">→ '+esc(a.routing?.recommended)+'</b> — '+esc(a.routing?.rationale)+' <span class="muted">· escalation: '+esc(a.routing?.escalation)+'</span></p>';
+  if(a.context_advice?.length)h+='<p class="muted" style="margin:3px 0">context: '+a.context_advice.map(esc).join(" · ")+'</p>';
+  if(a.warnings?.length)h+='<p class="muted" style="color:var(--warn);margin:3px 0">⚠ '+a.warnings.map(esc).join(" · ")+'</p>';
   h+='<details><summary>compact plan (JSON)</summary><div class="promptbox">'+esc(JSON.stringify(a.plan,null,1))+'</div></details>';
-  h+='<p class="muted" style="margin-top:8px">analysis cost this request: $'+(d.usage?.analysis_cost_usd||0).toFixed(4)+' ('+(d.usage?.prompt_tokens||0)+' in / '+(d.usage?.completion_tokens||0)+' out on '+esc(d.usage?.model||"")+')'+(d.cached?" — served from cache":"")+'</p>';
   h+='</div>';
 
   const names={claude:"Claude Cowork",grok:"Grok Build",gemini:"Gemini"};
-  h+='<div class="card" id="prompts"><h3 style="margin-top:0">Optimized prompts</h3>';
+  h+='<div class="card" id="prompts" style="padding-top:6px">';
   Object.entries(a.prompts||{}).forEach(([k,v])=>{if(!v)return;h+='<h3><span class="tool">'+names[k]+'</span></h3><div class="promptbox" data-p="'+k+'">'+esc(v)+'</div>'});
   h+='</div>';
   $("out").innerHTML=h;
   document.querySelectorAll(".promptbox[data-p]").forEach(b=>b.appendChild(copyBtn(b.textContent)));
-  window.scrollTo({top:$("out").offsetTop-20,behavior:"smooth"});
+  window.scrollTo({top:$("out").offsetTop-10,behavior:"smooth"});
 }
 init();
 </script></body></html>`;
